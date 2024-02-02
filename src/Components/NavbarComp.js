@@ -15,7 +15,7 @@ const NavbarComp = () => {
       <Navbar.Collapse>
        
         <Navbar.Link href="/kadar-klorin">Menghitung Kadar Klorin</Navbar.Link>
-        <Navbar.Link href="#">Menghitung Kadar Air</Navbar.Link>
+        <Navbar.Link href="/kadar-air">Menghitung Kadar Air</Navbar.Link>
         
       </Navbar.Collapse>
     </Navbar>
