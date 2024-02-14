@@ -8,7 +8,7 @@ import { useRef, useState } from "react"
 const page = () => {
   const router = useRouter()
   const checkinput=useRef(null)
-  const [num,setNum]= useState(1)
+  const [num,setNum]= useState('')
   const [result,setResult]=useState(null)
   const handleResult = async (e) => {
     e.preventDefault();
@@ -32,7 +32,7 @@ const page = () => {
   const handleReset = () => {
     // Reset nilai input dan hasil perhitungan
     
-    setNum(0);
+    setNum('');
     setResult(null);
     
   };
@@ -45,7 +45,7 @@ const page = () => {
     </div>
     <form className="flex justify-center flex-col items-center" onSubmit={handleResult}>
       
-      <FloatingLabel variant="outlined" label="Masukkan Volume Larutan" ref={checkinput} name="name"value={num} onChange={(e) => setNum(e.target.value)} />
+      <FloatingLabel variant="outlined" label="Volume Larutan" ref={checkinput} name="name"value={num} onChange={(e) => setNum(e.target.value)} required />
       <div className="pt-5 flex justify-between flex-col gap-2">
 
       <Button type="submit " color="success">Submit</Button>
@@ -55,7 +55,7 @@ const page = () => {
     </form>
      {/* Menampilkan hasil perhitungan jika sudah ada */}
      {result !== null && (
-        <p className="text-center">
+        <p className="text-center font-bold">
          Kadar Klorin Terkandung: {result} %
         </p>
       )}
