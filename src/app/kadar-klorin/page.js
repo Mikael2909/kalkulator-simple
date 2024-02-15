@@ -45,7 +45,7 @@ const page = () => {
     </div>
     <form className="flex justify-center flex-col items-center" onSubmit={handleResult}>
       
-      <FloatingLabel variant="outlined" label="Volume Larutan" ref={checkinput} name="name"value={num} onChange={(e) => setNum(e.target.value)} required />
+      <FloatingLabel type ="number" variant="outlined" label="Volume Larutan" ref={checkinput} name="name"value={num} onChange={(e) => setNum(e.target.value)} required />
       <div className="pt-5 flex justify-between flex-col gap-2">
 
       <Button type="submit " color="success">Submit</Button>
