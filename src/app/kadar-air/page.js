@@ -52,9 +52,9 @@ const page = () => {
     </div>
     <form className="flex justify-center flex-col items-center" onSubmit={handleResult}>
       
-      <FloatingLabel variant="outlined"  label="Berat Kosong Petri" ref={checkinput} name="name"value={num} onChange={(e) => setNum(e.target.value)} required/>
-      <FloatingLabel variant="outlined" label="Berat Isi" ref={checkinput} name="name"value={isi} onChange={(e) => setIsi(e.target.value)} required />
-      <FloatingLabel variant="outlined" label="Berat Total" ref={checkinput} name="name"value={total} onChange={(e) => setTotal(e.target.value)} required/>
+      <FloatingLabel type="number" variant="outlined"  label="Berat Kosong Petri" ref={checkinput} name="name"value={num} onChange={(e) => setNum(e.target.value)} required/>
+      <FloatingLabel type="number" variant="outlined" label="Berat Isi" ref={checkinput} name="name"value={isi} onChange={(e) => setIsi(e.target.value)} required />
+      <FloatingLabel type= "number" variant="outlined" label="Berat Total" ref={checkinput} name="name"value={total} onChange={(e) => setTotal(e.target.value)} required/>
       <div className="pt-5 flex justify-between flex-col gap-2">
 
       <Button type="submit " color="success">Submit</Button>
